@@ -14,6 +14,7 @@ async function main() {
 
 const server=express()
 
+server.use(cors());
 server.use(express.json())
 server.use(express.static(process.env.PUBLIC_DIR))
 server.use('/products',productRouter.router)
